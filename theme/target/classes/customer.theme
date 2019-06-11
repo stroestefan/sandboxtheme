@@ -1,0 +1,659 @@
+theme {
+    name = "MatillionGreen"
+    basePackage = "com.matillion.gxt.theme.green"
+
+    /* Background Color */
+    panelBackgroundColor = "#FFFFFF"
+
+    /* Matillion green and lighter shades */
+    darkGreen = "#4A7200"
+    borderColor = "#649900"
+    midGreen = "#7EC000"
+    lightGreen = "#97e700"
+    
+    /* Header Text Color */
+    headerTextColor = "#FFFFFF"
+
+    /* Greys */
+    black = "#000000"
+    grey = "#555555"
+    midGrey = "#AAAAAA"
+    lightMidGrey = "#BBBBBB"
+    lightGrey = "#CCCCCC"
+    
+    /* Selection and highlights */
+    hover = "#eeeeee"
+    selected = "#dddddd"
+
+    headerText {
+        color = theme.headerTextColor
+        family = "'Open Sans', sans-serif"
+        size = "13px"
+        weight = "normal"
+    }
+
+    details {
+        border = util.border("none")
+        borderColor = theme.borderColor
+        backgroundColor = theme.panelBackgroundColor
+        disabledOpacity = 0.5
+        disabledTextColor = ""
+
+        button {
+            borderRadius = 0
+            border = util.border("none")
+            overBorder = border
+            pressedBorder = border
+            radiusMinusBorderWidth = util.radiusMinusBorderWidth(border, borderRadius)
+            padding = util.padding(5, 9);
+            arrowColor = theme.headerTextColor
+
+            gradient = util.solidGradientString(theme.borderColor)
+            overGradient = util.solidGradientString(theme.midGreen)
+            pressedGradient = util.solidGradientString(theme.darkGreen)
+
+            font = util.fontStyle("'Open Sans',sans-serif", '13px', '#FFFFFF', 'bold');
+            smallFontSize = 13
+            smallLineHeight = 16
+            mediumFontSize = 13
+            mediumLineHeight = 18
+            largeFontSize = 15
+            largeLineHeight = 20
+        }
+
+        buttonGroup {
+            borderRadius = 0
+            border = util.border("none")
+
+            headerGradient = util.solidGradientString(theme.grey)
+            headerPadding = util.padding(2);
+
+            font = util.fontStyle("'Open Sans', sans-serif", '11px', theme.headerTextColor);
+
+            bodyPadding = util.padding(8);
+            bodyBackgroundColor = '#FFFFFF'
+        }
+
+        field {
+            borderColor = "#c0c0c0"
+            borderWidth = 1
+            borderStyle = "solid"
+            
+            backgroundColor = "#ffffff"
+
+            focusBorderColor = "#649900"
+
+            invalidBackgroundColor = "#ffffff"
+            invalidBorderColor = '#D94E37'
+            invalidBorderWidth = 1
+
+            padding = util.padding(2, 6, 6, 6)
+
+            height = 28
+
+            text = util.fontStyle("'Open Sans',sans-serif", '11px', theme.black);
+            emptyTextColor = "#808080"
+            lineHeight = "14px"
+
+            checkBox {
+                boxLabel = text;
+                padding {
+                    bottom = 0
+                    left = 19
+                    right = 10
+                    top = 0
+                }
+            }
+
+            radio {
+                boxLabel = text
+                padding {
+                    bottom = 0
+                    left = 19
+                    right = 10
+                    top = 0
+                }
+            }
+
+            slider {
+                trackHeight = 8
+                trackBorder = util.border('solid', "#d4d4d4", 1)
+                trackBackgroundColor = "#f5f5f5"
+                trackRadius = 4
+
+                thumbWidth = 15
+                thumbHeight = thumbWidth
+                thumbRadius = 8
+                thumbBorder = util.border("solid", "#777777", 1)
+                thumbBackgroundColor = "#f5f5f5"
+            }
+
+            sideLabel {
+                text = field.text
+                textAlign = 'left'
+                padding = util.padding(0, 0, 3)
+                labelPadding = util.padding(5, 5, 0, 0)
+                fieldPadding = util.padding(0)
+            }
+
+            topLabel {
+                text = field.text
+                textAlign = 'left'
+                padding = util.padding(0, 0, 5)
+                labelPadding = util.padding(6, 0, 0)
+                fieldPadding = util.padding(0)
+            }
+        }
+
+        datePicker {
+            border = util.border("solid", "#e1e1e1", 1)
+            backgroundColor = '#ffffff'
+
+            headerPadding = util.padding(8, 6)
+            headerBackgroundColor = "#f5f5f5"
+            headerText = util.fontStyle("'Open Sans',sans-serif", '12px', theme.black, 'bold')
+            headerTextPadding = util.padding(0, 5)
+
+            dayOfWeekBackgroundColor = '#ffffff'
+            dayOfWeekText = util.fontStyle("'Open Sans',sans-serif", '13px', theme.black, 'bold')
+            dayOfWeekLineHeight = '24px'
+            dayOfWeekPadding = util.padding(0, 9, 0, 0)
+
+            dayBorder = util.border('solid', '#ffffff', 1)
+            dayText = util.fontStyle("'Open Sans',sans-serif", '13px', theme.black)
+            dayLineHeight = '23px'
+            dayPadding = util.padding(0, 3, 0, 0)
+
+            dayDisabledBackgroundColor = '#eeeeee'
+            dayDisabledText = util.extend(dayText, {
+                color = '#808080'
+            })
+
+            dayNextBackgroundColor = '#ffffff'
+            dayNextText = util.extend(dayText, {
+                color = '#bfbfbf'
+            })
+
+            dayPreviousBackgroundColor = '#ffffff'
+            dayPreviousText = dayNextText
+
+            itemOverColor = theme.black
+            itemOverBackgroundColor = "#eaf3fa"
+
+            itemSelectedBorder = util.border('solid', '#649900', 1)
+            itemSelectedBackgroundColor = '#d0e0b2'
+            itemSelectedText = util.extend(dayText, {
+                weight = 'bold'
+            })
+
+            monthLeftButtonColor = "#ffffff"
+            monthLeftButtonOpacity = 1
+            monthLeftButtonMargin = util.margin(0, 0)
+            monthRightButtonColor = "#ffffff"
+            monthRightButtonMargin = util.margin(0, 0)
+            monthRightButtonOpacity = 1
+
+            todayBorder = util.border('solid', '#8b0000', 1)
+
+            footerPadding = util.padding(3, 0)
+            footerBackgroundColor = '#f5f5f5'
+
+            buttonMargin = util.margin(0, 3, 0, 2)
+
+            width = "212px"
+        }
+
+        panel {
+            font = headerText
+            backgroundColor = theme.panelBackgroundColor
+
+            border = util.border('none')
+            padding = util.padding(0)
+
+            frameWidth = 0
+            frameHeight = 0
+
+            headerLineHeight = "15px"
+            headerPadding = util.padding(10, 10);
+            headerBackgroundColor = theme.grey
+            headerGradient = util.solidGradientString(theme.grey)
+        }
+
+        framedPanel = util.extend(panel, {
+            borderRadius = 0
+            border = util.border("none")
+
+            padding = util.padding(0)
+            headerLineHeight = "15px"
+            headerPadding = panel.headerPadding
+            radiusMinusBorderWidth = util.radiusMinusBorderWidth(border, borderRadius)
+        })
+    
+        window = util.extend(framedPanel, {
+            border = util.border("none")
+            backgroundColor = theme.panelBackgroundColor
+            headerGradient = util.solidGradientString(theme.grey)
+            headerLineHeight = "15px"
+        })
+
+        messagebox {
+            text = util.fontStyle("'Open Sans',sans-serif", '13px')
+            messagePadding = util.padding(10, 10, 5)
+            bodyPadding = util.padding(5, 10, 10)
+            iconPadding = util.padding(10)
+        }
+
+        borderLayout {
+            panelBackgroundColor = theme.borderColor
+            collapsePanelBackgroundColor = theme.borderColor
+            collapsePanelBorder = util.border("none")
+        }
+
+        splitbar {
+            dragColor = theme.grey
+            handleOpacity = 0.5
+            handleWidth = 8
+            handleHeight = 48
+        }
+    
+        accordionLayout = util.extend(panel, {
+            headerGradient = util.solidGradientString(theme.grey)
+            headerPadding = util.padding(8, 10)
+            headerBarMargin = util.margin(0)
+            font = theme.headerText
+            border = util.border('solid', theme.panelBackgroundColor, 0, 0, 0)
+            panelPadding {
+                bottom = 0
+                left = 0
+                right = 0
+                top = 0
+            }
+            firstPanelPadding = panelPadding
+        })
+
+        fieldset {
+            text = util.fontStyle("'Open Sans',sans-serif", '13px')
+            border = util.border('solid', '#b5b8c8', 1)
+            backgroundColor = theme.panelBackgroundColor
+            padding = util.padding(5)
+            legendPadding = util.padding(0)
+            collapseIconColor = tools.primaryColor
+            collapseOverIconColor = tools.primaryOverColor
+            expandIconColor = collapseIconColor
+            expandOverIconColor = collapseOverIconColor
+        }
+
+        toolbar {
+            gradient = util.solidGradientString(theme.panelBackgroundColor)
+            border = util.border("none")
+            padding = util.padding(6, 0)
+
+            buttonOverride = util.extend(theme.details.button, {
+                font = util.fontStyle("'Open Sans',sans-serif", '13px', '#FFFFFF', 'bold');
+                overBorder = util.border('solid', '#cecece', 1)
+                pressedBorder = util.border('solid', '#cecece', 1)
+            })
+
+            labelItem {
+                text = field.text
+                lineHeight = '17px'
+                padding = util.padding(2, 2, 0)
+            }
+
+            separatorBorder {
+                bottom = 0
+                color = "#d0d0d0"
+                left = 0
+                right = 0
+                style = "solid"
+                top = 0
+            }
+            separatorHeight = 16
+        }
+
+        status {
+            text = util.fontStyle("'Open Sans',sans-serif", '11px', theme.black)
+            lineHeight = '16px'
+            padding = util.padding(0, 5)
+            border = util.border('solid', '#cccccc #d9d9d9 #d9d9d9', 1)
+        }
+
+        tools {
+            primaryColor = util.mixColors("#cccccc", "#649900", 0.8)
+            primaryOverColor = util.mixColors("#cccccc", "#649900", 0.6)
+            primaryClickColor = util.mixColors("#cccccc", "#649900", 0.4)
+            warningColor = "#D94E37"
+            allowColor = "#C6E38A"
+
+            tabs {
+                tabCloseOver = "#ffffff"
+            }
+        }
+
+        tabs {
+            borderRadius = 0
+            borderColor = theme.grey
+            bodyBackgroundColor = theme.panelBackgroundColor
+            gradient = util.solidGradientString(theme.lightGrey)
+            inactiveGradient = util.solidGradientString(theme.midGrey)
+            hoverGradient = util.solidGradientString(theme.lightMidGrey)
+            lastStopColor = "#969696"
+            inactiveLastStopColor = theme.darkGreen
+
+            tabItemBorderLeft = "none"
+            tabItemBorderTop = "none"
+            tabItemBorderRight = "none"
+
+            headingColor = "#1C94C4"
+
+            tabStripGradient = util.solidGradientString(grey)
+
+            headingText = util.extend(theme.headerText, {
+                color = theme.grey
+            })
+            hoverHeadingText = headingText
+
+            activeHeadingText = util.extend(headingText, {
+                color = theme.grey
+            })
+
+            iconWidth = 16
+            closeIconWidth = 13
+            iconLeftOffset = 6
+            iconTopOffset = 5
+
+            tabHeight = 35
+            tabSpacing = 2
+            padding = util.padding(7)
+
+            paddingWithIcon = util.padding(padding.left + iconWidth/2)
+            paddingWithClosable = util.padding(padding.right + closeIconWidth - 2)
+
+            plainActiveHeadingText = activeHeadingText
+            plainHeadingText = headingText
+            plainHoverHeadingText = hoverHeadingText
+
+            plainTabBarBorderTop = 1
+            plainTabBarBorderBottom = 1
+            plainTabStripSpacerBorder = 1
+            plainTabStripSpacerHeight = 2
+
+            scrollerBackgroundColor = theme.darkGreen
+            scrollerWidth = 18
+      
+            tabItemBorderBottom = "none"
+            activeTabItemBorderBottom = "0"
+            activeTabItemBorderTop = "0"
+            overTabItemBorderBottom = "0"
+            overTabItemBorderTop = "0"
+
+            tabStripPadding = util.padding(0)
+            tabBarBorder = "none"
+            tabBarBottomHeight = 0
+            tabStripTopBorder = "none"
+            tabStripBottomBorder = "none"
+            tabBodyBorder = "none"
+            tabTextPadding = util.padding(8, 2)
+
+            scrollerLeftDisabledOpacity = 0.7
+            scrollerLeftOverOpacity = 0.7
+            scrollerRightDisabledOpacity = 0.7
+            scrollerRightOverOpacity = 0.7
+
+            tabCloseIconOpacity = 0.6
+            tabCloseOverIconOpacity = 1
+            activeTabCloseIconOpacity = 0.8
+            activeTabCloseOverIconOpacity = 1
+        }
+
+        tree {
+            checkboxMargin = util.margin(3, 3, 0, 2)
+
+            dragOverBackgroundColor = theme.hover
+            dropBackgroundColor = theme.selected
+
+            iconMargin = util.margin(0, 2, 0, 0)
+            nodePadding = util.padding(4, 6, 4, 4)
+
+            itemHeight = "22px"
+            itemLineHeight = "22px"
+
+            overBackgroundColor = theme.hover
+            selectedBackgroundColor = theme.selected
+
+            text = util.fontStyle("'Open Sans', sans-serif", '10px', theme.black)
+            itemText = util.fontStyle("'Open Sans', sans-serif", '10px', theme.black)
+        }
+
+        info {
+            backgroundColor = theme.panelBackgroundColor
+            borderRadius = 0
+            opacity = 1.0
+            border = util.border("none")
+            radiusMinusBorderWidth = util.radiusMinusBorderWidth(border, borderRadius)
+            headerPadding = util.padding(0,0,8,0)
+            headerText = theme.headerText
+            messagePadding = util.padding(0)
+            messageText = util.fontStyle("'Open Sans', sans-serif", '14px', '#555555');
+            margin = util.margin(2,0,0,0)
+            padding = util.padding(2,7)
+        }
+
+        tip {
+            backgroundColor = "#ffffff"
+            borderRadius = 0
+            opacity = 1
+            border = util.border("none")
+            radiusMinusBorderWidth = util.radiusMinusBorderWidth(border, borderRadius)
+            headerPadding = util.padding(0)
+            headerText = util.fontStyle("'Open Sans', sans-serif", '11px', theme.black, 'bold');
+            messagePadding = util.padding(0,0,4)
+            messageText = util.fontStyle("'Open Sans', sans-serif", '11px');
+            margin = util.margin(0)
+            padding = util.padding(3)
+        }
+
+        errortip = tip
+
+        grid {
+            bodyBorder = util.border('none')
+            columnHeader {
+                borderWidth = 1
+                borderColor = '#dddddd'
+                borderStyle = 'solid'
+                gradient = '#eeeeee 0%, #eeeeee 100%'
+                overGradient = '#dddddd 0%, #dddddd 100%'
+
+                text = util.fontStyle("'Open Sans', sans-serif", '11px', grey, 'bold')
+                padding = util.padding(6, 10)
+                lineHeight = "16px"
+
+                menuButtonWidth = 18
+                menuGradient = gradient
+                menuBorder = util.border('solid', theme.lightGrey, 0,0,0,1)
+                menuHoverGradient = theme.hover
+                menuHoverBorder = menuBorder
+                menuActiveGradient = theme.selected
+                menuActiveBorder = menuBorder
+            }
+
+            cellPadding = util.padding(6,10)
+            cellText = util.fontStyle("'Open Sans',sans-serif", '11px', theme.black)
+            cellLineHeight = "16px"
+            cellVBorderColor = '#ededed'
+            cellHBorderColor = '#ededed'
+            cellBorderWidth = 1
+            cellBackgroundColor = theme.panelBackgroundColor
+            cellAltBackgroundColor = '#fafafa'
+
+            cellOverVBorderColor = '#ededed'
+            cellOverVBorderStyle = 'solid'
+            cellOverHBorderColor = '#daefb2'
+            cellOverHBorderStyle = 'solid'
+
+            cellOverBackgroundColor = theme.hover
+
+            cellSelectedVBorderColor = '#ededed'
+            cellSelectedVBorderStyle = 'solid'
+            cellSelectedHBorderColor = '#daefb2'
+            cellSelectedHBorderStyle = 'solid'
+
+            cellSelectedBackgroundColor = theme.selected
+
+            specialColumnGradient = ""
+            specialColumnGradientSelected = ""
+
+            group {
+                backgroundColor = '#eeeeee'
+                border = util.border('solid', '#c0c0c0', 0, 0, 1)
+                text = columnHeader.text
+                padding = util.padding(8, 4)
+                iconSpacing = 11 + 6 // icon is 11px wide, plus 6px padding
+                summary {
+                    text = util.extend(columnHeader.text, {
+                    color = '#000000'
+                    })
+                    backgroundColor = '#ffffff'
+                }
+            }
+
+            rowNumberer {
+                text = util.fontStyle("'Open Sans',sans-serif", '13px', '#000000')
+                padding = util.padding(5,3,4)
+            }
+
+            rowEditor {
+                backgroundColor = '#DFEAF2'
+                border = util.border('solid', '#c0c0c0', 1, 0);
+            }
+
+            footer {
+                text = util.fontStyle("'Open Sans',sans-serif", '13px', '#000000', 'bold')
+                backgroundColor = '#ffffff'
+                cellBorder = util.border('solid', '#ededed', 1, 0, 0)
+            }
+        }
+
+        listview {
+            text = util.fontStyle("'Open Sans', sans-serif",'11px');
+            lineHeight = '26px'
+            backgroundColor = '#ffffff'
+            border = util.border('solid', '#c0c0c0', 1)
+
+            item {
+                padding = util.padding(0,6)
+                border = util.border('none')
+                gradient = util.solidGradientString('#ffffff')
+            }
+
+            overItem {
+                padding = util.padding(0,6)
+                border = util.border('none')
+                gradient = util.solidGradientString('#d0e0b2')
+            }
+
+            selectedItem {
+                padding = util.padding(0,6)
+                border = util.border('none')
+                gradient = util.solidGradientString('#daefb2')
+            }
+        }
+
+        menu {
+            border = util.border('solid', theme.lightGrey, 1)
+            padding = util.padding(0)
+            gradient = util.solidGradientString(theme.panelBackgroundColor)
+            lastGradientColor = theme.panelBackgroundColor
+
+            itemText = util.fontStyle("'Open Sans',sans-serif", '11px')
+            itemLineHeight = '24px'
+            itemPadding = util.padding(0)
+
+            activeItemText = itemText
+            activeItemBackgroundColor = '#d6e8f6'
+            activeItemGradient = util.solidGradientString(theme.hover)
+            activeItemBorder = util.border('none')
+
+            bar {
+                backgroundColor = menu.backgroundColor
+                border = util.border('none')
+                padding = util.padding(0)
+                gradient = menu.gradient
+
+                itemText = menu.itemText
+                itemLineHeight = menu.itemLineHeight
+                itemPadding = util.padding(1, 1)
+
+                hoverItemText = itemText
+                hoverItemBackgroundColor = menu.activeItemBackgroundColor
+                hoverItemGradient = menu.activeItemGradient
+                hoverItemBorder = util.border('none')
+
+                activeItemText = itemText
+                activeItemBackgroundColor = menu.activeItemBackgroundColor
+                activeItemGradient = menu.activeItemGradient
+                activeItemBorder = util.border('none')
+            }
+
+            separator {
+                height = 1
+                margin = util.margin(2, 3)
+                color = theme.lightGrey
+            }
+
+            header {
+                border = util.border('none')
+                backgroundColor = theme.panelBackgroundColor
+
+                itemText = util.fontStyle("'Open Sans',sans-serif", '11px', theme.grey, 'bold')
+                itemLineHeight = '24px'
+                itemPadding = util.padding(5, 21, 7, 8)
+            }
+        }
+
+        mask {
+            opacity = 0.9
+            backgroundColor = theme.panelBackgroundColor
+
+            box {
+                padding = util.padding(5)
+                borderColor = ''
+                borderStyle = 'none'
+                borderWidth = 0
+                borderRadius = 3
+                radiusMinusBorderWidth = util.max(0, borderRadius - borderWidth)
+                backgroundColor = '#e5e5e5'
+                text = util.fontStyle("'Open Sans', sans-serif", '13px', '#666666')
+                textPadding = util.padding(21, 0, 0)
+                loadingImagePosition = 'center 0'
+            }
+        }
+
+        progressbar {
+            border = util.border('none')
+            text = util.fontStyle("'Open Sans', sans-serif", '13px', '#666666', 'bold')
+            backgroundGradient = ''//transparent
+            textPadding = util.padding(3, 0)
+            textAlign = 'center'
+            barTextColor = text.color
+            barGradient = util.solidGradientString(theme.midGreen)
+            barBorder = util.border('none')
+        }
+
+        statusproxy {
+            text = util.fontStyle("'Open Sans', sans-serif", '13px')
+            border = util.border('solid', '#dddddd #bbbbbb #bbbbbb #dddddd', 1)
+            backgroundColor = '#ffffff'
+            opacity = 0.85
+        }
+
+        colorpalette {
+            itemSize = 16
+            itemPadding = util.padding(2)
+            backgroundColor = '#ffffff'
+            itemBorder = util.border('solid', '#e1e1e1', 1)
+            selectedBackgroundColor = '#e6e6e6'
+            selectedBorder = util.border('solid', '#8bb8f3', 1)
+        }
+    }
+}
