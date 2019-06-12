@@ -69,6 +69,10 @@
     <when-property-is name="gxt.theme" value="tritium"/>
   </replace-with>
 
+  <replace-with class="com.gawkat.sandbox.client.CustomStoreFilterFieldAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.form.TriggerField.TriggerFieldAppearance" />
+  </replace-with>
+
   <!-- Specify the paths for translatable code -->
   <source path='custom/client'/>
 
