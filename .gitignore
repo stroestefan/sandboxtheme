@@ -20,3 +20,6 @@ war/WEB-INF/classes/
 
 #gwt junit compilation files
 www-test/
+
+target
+theme/target
