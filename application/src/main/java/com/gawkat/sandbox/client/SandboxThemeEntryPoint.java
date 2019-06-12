@@ -9,7 +9,7 @@ public class SandboxThemeEntryPoint implements EntryPoint {
 
   @Override
   public void onModuleLoad() {    
-    new RowExpanderGridExample().onModuleLoad();
+    new RowEditingGridExample().onModuleLoad();
   }
 
 }
