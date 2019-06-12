@@ -368,7 +368,7 @@ public class RowExpanderGridExample implements IsWidget, EntryPoint {
     CalendarUtil.addDaysToDate(d2, 2);
 
     List<Stock> stocks = new ArrayList<Stock>();
-    stocks.add(new Stock("Apple Inc.", "AAPL", 125.64, 123.43, d1));
+    stocks.add(new Stock("Matillion", "ARR", 125.64, 123.43, d1));
     stocks.add(new Stock("Cisco Systems, Inc.", "CSCO", 25.84, 26.3, d2));
     stocks.add(new Stock("Google Inc.", "GOOG", 516.2, 512.6, d1));
     stocks.add(new Stock("Intel Corporation", "INTC", 21.36, 21.53, d2));
